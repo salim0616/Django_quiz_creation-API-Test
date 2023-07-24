@@ -3,8 +3,9 @@
 Don't bother about UIs, we're here for APIs,
 Here you need to identify the schema/model fields by observing the UIs, The goal of this assignment is to build **_API_** for a **Quiz  Creation** site in which you are free to play with as much as possible your sample data.
 
-<img src="car_rental1.png" />
-<img src="car_rental2.png" />
+<img src="IMG_00CB8B4315DF-1.jpeg" />
+<img src="IMG_3D8E21186512-1.jpeg" />
+<img src="IMG_DB4CC2E5EA09-1.jpeg" />
 
 ---
 
