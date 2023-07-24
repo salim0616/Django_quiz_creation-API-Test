@@ -3,15 +3,15 @@
 Don't bother about UIs, we're here for APIs,
 Here you need to identify the schema/model fields by observing the UIs, The goal of this assignment is to build **_API_** for a **Quiz  Creation** site in which you are free to play with as much as possible your sample data.
 
-<img src="IMG_00CB8B4315DF-1.jpeg" />
-<img src="IMG_3D8E21186512-1.jpeg" />
-<img src="IMG_DB4CC2E5EA09-1.jpeg" />
+<img src="IMG_00CB8B4315DF-1.jpeg" width="200" height="300"/>
+<img src="IMG_3D8E21186512-1.jpeg" width="200" height="300"/>
+<img src="IMG_DB4CC2E5EA09-1.jpeg" width="200" height="300"/>
 
 ---
-
+## NOTE:- Above images are only for reference ##
 <hr>
 
-### API Features:
+### API Features: ###
 
 1. User (mandatory)
 - Login
@@ -32,16 +32,16 @@ Here you need to identify the schema/model fields by observing the UIs, The goal
 
 5.Create Logs (optional)
  -whenever any user login , a log should be generate in login_logs table(model) (fields=user,user_type,login_at )<br>
- <b>Note<b>: Use signals to create logs
+ <b>Note</b>: Use signals to create logs
 <hr>
 
 ## Table data examples ##
 - exam table ( ssc cgl,Bank PO,UPSC etc)
 - sections table  (GK,Quantative aptitude,Reasoning,English)
 
-### Coding Guidelines
+### Coding Guidelines ###
 
-- Please fork current problem repository or use it as template and, add [@divyansh420](https://github.com/divyansh420) ,[@nitesh5695smilebots](https://github.com/nitesh5695smilebots) as collaborator while intializing repository in github. And follow the given timeline instructions from your mail.
+- Please fork current problem repository or use it as template and, add  [@nitesh5695smilebots](https://github.com/nitesh5695smilebots) as collaborator while intializing repository in github. And follow the given timeline instructions from your mail.
 - The changes/commits will not be considered after timeline mentioned in your mail.
 - Please avoid any frameworks and libraries except **_Django REST framework_**.
 - Focus more on the **_Django REST framework_** side of the problem.
