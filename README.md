@@ -34,6 +34,10 @@ Here you need to identify the schema/model fields by observing the UIs, The goal
  <b>Note<b>: Use signals to create logs
 <hr>
 
+## Table data examples ##
+- exam table ( ssc cgl,Bank PO,UPSC etc)
+- sections table  (GK,Quantative aptitude,Reasoning,English)
+
 ### Coding Guidelines
 
 - Please fork current problem repository or use it as template and, add [@divyansh420](https://github.com/divyansh420) ,[@nitesh5695smilebots](https://github.com/nitesh5695smilebots) as collaborator while intializing repository in github. And follow the given timeline instructions from your mail.
