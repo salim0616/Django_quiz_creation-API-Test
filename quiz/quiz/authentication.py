@@ -56,5 +56,6 @@ class QuizAuthentication(authentication.BaseAuthentication):
             raise exceptions.AuthenticationFailed("User Does Not Exists")
         
         request.user_id=user.uid
+        request.is_admin=True if user.usertype=='ADMIN' else False
         request.user=user
         return (user,None)

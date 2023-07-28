@@ -37,6 +37,16 @@ class Questions(models.Model):
     option2=models.CharField(max_length=200)
     option3=models.CharField(max_length=200)
     option4=models.CharField(max_length=200)
+    correct_answer=models.CharField(max_length=200,default="")
 
     class Meta:
         db_table='questions'
+
+
+# class UserAttempts(models.Model):
+#     user=models.ForeignKey(User,on_delete=models.DO_NOTHING)
+#     no_of
+
+    
+
+
