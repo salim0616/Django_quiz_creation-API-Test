@@ -8,11 +8,18 @@ class QuizAuthentication(authentication.BaseAuthentication):
 
     ## To fetch the bearer Token
     def get_jwt_token(self, request):
-        print(request.headers)
-        auth=request.headers.get('Authorization').split(' ')
-        print(auth)
-        
-        return auth[1]
+        try:
+        # print(request.headers)
+            auth=request.headers.get('Authorization').split(' ')
+            print(auth)
+            
+            return auth[1]
+        except Exception as e:
+            print("Unknown error occured in validate_jwt",e)
+            msg = ('Invalid token') 
+            raise exceptions.AuthenticationFailed(msg)
+
+
 
     def validate_jwt(self, token):
         try:
@@ -48,5 +55,6 @@ class QuizAuthentication(authentication.BaseAuthentication):
             print("User Does Not Exists")
             raise exceptions.AuthenticationFailed("User Does Not Exists")
         
+        request.user_id=user.uid
         request.user=user
         return (user,None)

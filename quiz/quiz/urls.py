@@ -6,6 +6,7 @@ from users.views import probe
 urlpatterns = [
     path('',probe,name='probe-check'),
     path("user/",include("users.urls")),
+    path("manage/",include("quizmanager.urls")),
     # path('quizz/',include('quiz.urls')),
 ]
 
