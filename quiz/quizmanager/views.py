@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import ExamSerilizer,SectionSerilizer,TopicSerilizer,QuestionSerializer
 from rest_framework import generics
+from django.db.models import F
 
 
 server_err={'status':500,'data':'Internal server occured'}
@@ -171,10 +172,31 @@ class UserSubmitQuiz(generics.ListAPIView):
     '''
 
     def get(self,request):
-        topic=request.data.get('topic')
-        total_correct=0
-        final_query=Questions.objects.filter(topic_id=topic).values('id','correct_answer')
-        # if 
+        try:
+            topic=request.data.get('topic')
+
+            # one approach fetching with id
+            # final_query=Questions.objects.filter(topic_id=topic).values_list('id','correct_answer').annotate(q_a=F('id')).values(q_a)
+            # for i in final_query:
+
+            for x in request.data.get('q_a'):
+                
+                if Questions.objects.get(id=x['q_no']).correct_answer==x['u_a']:
+                    total_correct+=1
+            return Response(
+                {'total_correct':total_correct,'total_wrong': len(request.data.get('q_a'))-total_correct},status=status.HTTP_200_OK
+            )
+
+        except Exception as e:
+            print(e)
+            return Response(server_err,status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+
+
+        
+        
+
+
 
 
         
